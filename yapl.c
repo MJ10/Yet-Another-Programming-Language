@@ -12,8 +12,7 @@ int ex(nodeType *p) {
         case WHILE:     while(ex(p->opr.op[0])) ex(p->opr.op[1]); return 0;
         case IF:        if (ex(p->opr.op[0]))
                             ex(p->opr.op[1]);
-                        else if (p->opr.nops > 2)
-                            ex(p->opr.op[2]);
+                        ex(p->opr.op[2]);
                         return 0;
         case PRINT:     printf("%d\n\n", ex(p->opr.op[0])); return 0;
         case ';':       ex(p->opr.op[0]); return ex(p->opr.op[1]);
