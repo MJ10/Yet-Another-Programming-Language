@@ -1,6 +1,6 @@
 # Yet Another Programming Language
 
-This is a basic interpreter built using `bison` and `flex` for the a programming language defined by the following grammar:
+This is a simple interpreter built using `bison` and `flex` for the a programming language defined by the following grammar:
 
 ```
 <expr> := [ <op> <expr> <expr> ] | 
